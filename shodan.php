@@ -62,6 +62,7 @@ if(preg_match_all('/<p class="warn">That username already exists.<\/p>/', $resul
 echo "Register Failed!, Maybe Username is Already Used\n";
 }else{
 echo "Register Success! - Saved to saved.txt\n";
+echo "Check Your Email To Verify the Account\n";
 $fp = fopen("saved.txt", 'a');
 $x = fwrite($fp, "Email : ".$email."\n"."Username : ".$username."\n"."Password : ".$password."\n\n");
 }
