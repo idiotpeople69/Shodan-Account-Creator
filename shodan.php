@@ -59,7 +59,7 @@ $result = curl_exec($curl);
 echo "[+] Process Register account "."\n";
 sleep(1);
 if(preg_match_all('/<p class="warn">That username already exists.<\/p>/', $result)) {
-echo "Register Failed!, Maybe Username is Already\n";
+echo "Register Failed!, Maybe Username is Already Used\n";
 }else{
 echo "Register Success! - Saved to saved.txt\n";
 $fp = fopen("saved.txt", 'a');
